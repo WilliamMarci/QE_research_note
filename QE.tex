@@ -29,8 +29,17 @@ and it's trace is \(\mathrm{tr}\ \rho=1\). It can be used to caculate the averag
 If quantum state cannot be described by ONE wave function, in other words, the quantum state is a mixed state\(\ket{\psi}=\sum_k c_k\ket{k}=\sum_kp_k\ket{k},\sum_k p_k=1\), the density matrix is:
 \[\rho=\sum_k p_k\ket{k}\bra{k}\]
 
-\subsection{Irreducible tensor}
+\subsection{Helicity}
+we define the helicity operator as:
+\[h=\vec{S}\cdot\frac{\vec{p}}{|\vec{p}|}=\vec{S}\cdot\hat{p}\]
+where \(\vec{S}\) is the spin operator, and \(\hat{p}\) is the momentum direction. The eigenvalue of helicity operator is the helicity of the particle. 
+In 3-dim, the helicity eigenvector is:
+\[\ket{\psi_{\pm}}=\frac{1}{\sqrt{2}}\left(\ket{1,0}\pm i\ket{0,1}\right)\]
+\[\ket{\psi_{0}}=\ket{0,0}\]
+where \(\ket{1,0}\) and \(\ket{0,1}\) are the eigenvector of \(S_z\).
 
+\subsection{Irreducible tensor}
+On the textbook \marginpar{In \textit{Quantum Mechanics} by J.Y Zeng, in Section 7.3 Part 2, or \textit{Modern Quantum Mechanics} by J.J Sakurai, in Section 3.11}
 
 \subsection{\(SU(3)\) symmetry matrix}
 For a \(SU(3)\) symmetry matrix, the matrix\(\lambda_i\) is:
@@ -60,6 +69,21 @@ which:
 \[U=\exp\left[\frac{1}{2}i\hat{\theta}\hat{n}\cdot\lambda\right]\]
 
 \section{Bell inequalities}
+\subsection{Density matrix in spin-1 particle}
+In the paper\cite{fabbrichesi_bell_2023}, we define the normalized helicity eigenvector \(\psi_{\pm,0}\) of the massive spin-1 particle of mass M, corresponding respectively to eigenvalues \(\lambda=\pm1,0\). In order to describe the helicity of the spin-1 particle in a more general reference frame and in a covariant manner, we first promote the three basis vectors to four-vectors by extending them with a null temporal component and then perform a Lorentz boost along the \(-\hat{k}\) direction. we difineL
+\begin{itemize}
+    \item velocity: \(\beta=\sqrt{1-M^2/E^2}\)
+    \item 4-momentum: \(p^\mu=E(1,\beta \hat{k})\)
+    \item boost basis vector:
+        \[n_1^\mu=(0,\hat{n}),n_2^\mu=(0,\hat{r}), n_3^\mu=\frac{E}{M}(\beta,\hat{k})\]
+\end{itemize}
+\begin{figure}[htb]
+    \centering
+    \includegraphics[width=0.5\textwidth]{figure/referenceSystem.pdf}%Path of the figure%
+    \caption{Reference System in 3-dim }%Title of the figure%
+    \label{fig:ref3d}
+\end{figure}
+
 \subsection{CHSH inequality derivation}
 
 The proof\cite{clauser1974experimental} of the CHSH inequality is based on the following assumptions: \textbf{Local hidden variable} theories: the measurement results of the two particles are determined by the hidden variables of the particles themselves, and the measurement results of the two particles are independent of each other.
